@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+class filemerging
+{
+	public static void main(String []args)throws IOException
+	{
+		String x;
+		PrintWriter pw=new PrintWriter("pqr.txt");
+		BufferedReader br=new BufferedReader(new FileReader("abc.txt"));
+		x=br.readLine();
+		while(x!=null)
+		{
+			pw.println(x);
+			x=br.readLine();
+		}
+		br.close();
+		pw.close();
+		PrintWriter pw1=new PrintWriter("abc.txt");
+		BufferedReader br1=new BufferedReader(new FileReader("xyz.txt"));
+		x=br1.readLine();
+		while(x!=null)
+		{
+			pw1.println(x);
+			x=br1.readLine();
+		}
+		br1.close();
+		pw1.close();
+	}
+}
