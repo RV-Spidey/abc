@@ -1,0 +1,47 @@
+import java.util.*;
+class complex1
+{
+	int real,img;
+	Scanner sc=new Scanner(System.in);
+	public void read()
+	{
+		System.out.println("enter the real and imaginary part");
+		real=sc.nextInt();
+		img=sc.nextInt();
+	}
+	public complex1 add(complex1 c)
+	{
+		complex1 p=new complex1();
+		p.real=real+c.real;
+		p.img=img+c.img;
+		return p;
+	}
+	public complex1 mul(complex1 c)
+	{
+		complex1 p=new complex1();
+		p.real=real*c.real-img*c.img;
+		p.img=real*c.img+img*c.real;
+		return p;
+	}
+	public void display()
+	{
+		System.out.println("resultant complex is:"+real+"+i"+img);
+	}
+}
+class complex
+{
+	public static void main(String []args)
+	{
+		complex1 c1=new complex1();
+		complex1 c2=new complex1();
+		complex1 c3=new complex1();
+		c1.read();
+		c2.read();
+		c3=c1.add(c2);
+		c3.display();
+		c3=c1.mul(c2);
+		c3.display();
+	}
+}
+		
+	
