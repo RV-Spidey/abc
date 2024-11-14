@@ -1,0 +1,26 @@
+import java.util.*;
+class stringpalindrome
+{
+	public static void main(String []args)
+	{	
+		String s;
+		int flag=0,i,l;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the string:");
+		s=sc.nextLine();
+		l=s.length();
+		for(i=0;i<l/2;i++)
+		{
+			if(s.charAt(i)!=s.charAt(l-i-1))
+			{
+				flag=1;
+				break;
+			}
+		}
+		if(flag==0)
+			System.out.println("palindrome");
+		else
+			System.out.println("not palindrome");
+	}
+}
+		
