@@ -1,0 +1,72 @@
+import java.util.*;
+	interface Shape
+	{
+		public void getdimension();
+		public void findarea();
+	}
+	class Rectangle implements Shape
+	{
+		Scanner s=new Scanner(System.in);
+		int a,b;
+		float ar;
+		public void getdimension()
+		{
+			System.out.println("Enter the Length and Breadth of rectangle:");
+			 a=s.nextInt();
+			 b=s.nextInt();
+		}
+		public void findarea()
+		{
+			getdimension();
+			ar=a*b;
+			System.out.println("The area of rectangle is "+ar);
+		}
+	}
+	class Circle implements Shape
+	{
+		int a;
+		double ar;
+		Scanner s=new Scanner(System.in);
+		public void getdimension()
+                {
+                        System.out.println("Enter the radius of circle:");
+                        a=s.nextInt();
+                }
+                public void findarea()
+                {
+			getdimension();
+                        ar=3.5*a*a;
+                        System.out.println("The area of circle is "+ar);
+                }
+	}
+	class Triangle implements Shape
+	{
+		int a,b;
+		double ar;
+		Scanner s=new Scanner(System.in);
+		public void getdimension()
+                {
+                        System.out.println("Enter the Base and Height of rectangle:");
+                        a=s.nextInt();
+                        b=s.nextInt();
+                }
+                public void findarea()
+                {
+			getdimension();
+                        ar=0.5*a*b;
+                        System.out.println("The area of triangle is "+ar);
+                }
+	}
+	class Interface
+	{
+		public static void main(String [] arg)
+		{
+			Rectangle r = new Rectangle();
+			Circle c = new Circle();
+			Triangle t = new Triangle();
+			r.findarea();
+			c.findarea();
+			t.findarea();
+		}
+	}
+
