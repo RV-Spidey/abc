@@ -1,0 +1,37 @@
+package arithmetic;
+class Arithmeticopr
+{
+	public float add(int x,int y)
+	{
+		return x+y;
+	}
+	public float sub(int x,int y)
+	{
+		return x-y;
+	}
+	public float mult(int x,int y)
+	{
+		return x*y;
+	}
+	public float div(int x,int y)
+	{
+		return x/y;
+	}
+}
+import arithmetic.arithmeticopr;
+import java.util.*;
+class usingpack
+{
+	public static void main(string []args)
+	{
+		int a,b;
+		Scanner sc=new Scanner(System.in);
+		Arithmeticopr ar=new Arithmeticopr();
+		a=sc.nextInt();
+		b=sc.nextInt();
+		System.out.println("sum is"+ar.sum(a,b));
+		System.out.println("diff is"+ar.diff(a,b));
+		System.out.println("prod is"+ar.mult(a,b));
+		System.out.println("quat is"+ar.div(a,b));
+	}
+}
